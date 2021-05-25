@@ -1,0 +1,95 @@
+
+<div class="start">
+<h3> Add Society</h3>
+<div style = "width: 400px" [hidden] = "submitted">
+    <form #createSocietyForm="ngForm" novalidate>
+        <!-- <div class="form-group">
+            <label for="societyId">societyID</label>
+            <input type="text" name="societyId" class="form-control" 
+                    placeholder="Enter the societyID" required 
+                    #societyId="ngModel"
+                    [(ngModel)]= "society.societyId"
+                    [ngClass]= "{'is-invalid':societyId?.errors && (societyId?.touched || societyId?.dirty),
+                                    'is-valid':societyId?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf= "societyId?.errors?.required">Society Id is required</strong>
+                <strong *ngIf= "societyId?.errors && (societyId?.touched || societyId?.dirty) ">SocietyId is not valid</strong>
+            </div>    
+        </div> -->
+        <div class="form-group">
+            <label for="societyName">societyName</label>
+            <input type="text" name="societyName" class="form-control" 
+                    placeholder="Enter the societyName" required minlength="5" 
+                    #societyName="ngModel"
+                    [(ngModel)]= "society.societyName"
+                    [ngClass]= "{'is-invalid':societyName?.errors && (societyName?.touched || societyName?.dirty),
+                                    'is-valid':societyName?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf= "societyName?.errors?.required">Society Name is required</strong>
+                <strong *ngIf= "societyName?.errors && (societyName?.touched || societyName?.dirty) ">Society Name is not valid</strong>
+            </div>    
+        </div>
+        <div class="form-group">
+            <label for="headOfSociety">society headOfSociety</label>
+            <input type="text" name="headOfSociety" class="form-control" 
+                  placeholder="Enter the product headOfSociety" required minlength="5"
+                  [(ngModel)]= "society.headOfSociety" #headOfSociety="ngModel"
+                  [ngClass]= "{'is-invalid':headOfSociety?.errors && (headOfSociety?.touched || headOfSociety?.dirty),
+                  'is-valid':headOfSociety?.valid}">
+                <div class="invalid-feedback">
+                    <strong *ngIf= "headOfSociety?.errors?.required">headOfSociety is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label freor="village">society vilage</label>
+            <input type="text" name="village" class="form-control" 
+                  placeholder="Enter the society vilage" required
+                  required [(ngModel)]= "society.village" #village="ngModel"
+                  [ngClass]= "{'is-invalid':village?.errors && (village?.touched ||village?.dirty),
+                  'is-valid':village?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "village?.errors?.required">village is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label freor="mandal">Society mandal name</label>
+            <input type="text" name="mandal" class="form-control" 
+                  placeholder="Enter the Society mandal name" required
+                  required [(ngModel)]= "society.mandal" #mandal="ngModel"
+                  [ngClass]= "{'is-invalid':mandal?.errors && (mandal?.touched ||mandal?.dirty),
+                  'is-valid':mandal?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "mandal?.errors?.required">mandal is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label freor="district">society district</label>
+            <input type="text" name="district" class="form-control" 
+                  placeholder="Enter the society District Name" required
+                  required [(ngModel)]= "society.district" #district="ngModel"
+                  [ngClass]= "{'is-invalid':district?.errors && (district?.touched ||district?.dirty),
+                  'is-valid':district?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "district?.errors?.required">district is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="pincode">society pincode</label>
+            <input type="text" name="pincode" class="form-control" 
+                  placeholder="Enter the society pincode" required 
+                  [(ngModel)]= "society.pincode" #pincode="ngModel"
+                  [ngClass]= "{'is-invalid':pincode?.errors && (pincode?.touched || pincode?.dirty),
+                  'is-valid':pincode?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "pincode?.errors?.required">pincode is required</strong>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Society</button>
+        <button type="submit" class="btn btn-default" (click)= "createSocietyForm.reset()">Reset</button>
+    </form>
+</div>
+<div [hidden]="submitted">
+    <h4>Society added successully</h4>
+</div>
+</div>
+<img  src = "../../assets/userPage.jpg">

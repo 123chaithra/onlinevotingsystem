@@ -1,0 +1,67 @@
+<div class="start">
+<h2>Voter Details</h2>
+<hr>
+<div *ngIf = "voter">
+    <div>
+        <label><b>IdCardNo: </b></label>{{voter.voterIdCardNo}}
+    </div>
+    <div>
+        <label><b>FirstName: </b></label>{{voter.firstName}}
+    </div>
+    <div>
+        <label><b>Last Name: </b></label>{{voter.lastName}}
+    </div>
+    <div>
+        <label><b>Gender: </b></label>{{voter.gender}}
+    </div>
+    <div>
+        <label><b>ReservationCategory: </b></label>{{voter.reservationCategory}}
+    </div>
+    <div>
+        <label><b>mobile number: </b></label>{{voter.mobileno}}
+    </div>
+    <div>
+        <label><b>EmailId: </b></label>{{voter.emailId}}
+    </div>
+    <div>
+        <label><b>Address1: </b></label>{{voter.address1}}
+    </div>
+    <div>
+        <label><b> Address2: </b></label>{{voter.address2}}
+    </div>
+    <div>
+        <label><b>Mandal: </b></label>{{voter.mandal}}
+    </div>
+    <div>
+        <label><b>District: </b></label>{{voter.district}}
+    </div>
+    <div>
+        <label><b>Pincode: </b></label>{{voter.pincode}}
+    </div>
+    <div>
+        <label><b>SocietyName: </b></label>{{voter.society.societyName}}
+    </div>
+    <div>
+        <label><b>HeadOfSociety: </b></label>{{voter.society.headOfSociety}}
+    </div>
+    <div>
+        <label><b>Village: </b></label>{{voter.society.village}}
+    </div>
+    <div>
+        <label><b>Mandal: </b></label>{{voter.society.mandal}}
+    </div>
+    <div>
+        <label><b>District: </b></label>{{voter.society.district}}
+    </div>
+    <div>
+        <label><b>Pincode: </b></label>{{voter.society.pincode}}
+    </div>
+    <div>
+        <label><b>CastedVote: </b></label>{{voter.castedVote}}
+    </div>
+</div>
+<br>
+<br>
+<button (click) = "goToVoterList()" class="btn btn-primary">Go To Voter List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">

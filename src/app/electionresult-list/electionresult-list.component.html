@@ -1,0 +1,42 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>ElectionResult List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Result id</th>
+                    <th>Polling Date</th>
+                    <th>Candidates form no</th> 
+                    <th>Cooperative SocietyName</th>
+                    <th>Total SocietyVotes</th>
+                    <th>Total PolledVotes</th>
+                    <th>Total PollingPercentage</th>
+                    <th>Total Candidatevotes</th>
+                    <th>Candidates VotesPercentage</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let ElectionResult of electionresults">
+                    <td>{{ElectionResult.id}}</td>
+                    <td>{{ElectionResult.pollingDate}}</td>
+                    <td>{{ElectionResult.candidate.nominationFormNo}}</td>
+                    <td>{{ElectionResult.coop_SocietyName}}</td>
+                    <td>{{ElectionResult.totalSocietyVotes}}</td>
+                    <td>{{ElectionResult.totalPolledVotes}}</td>
+                    <td>{{ElectionResult.totalPollingPercentage}}</td>
+                    <td>{{ElectionResult.totalCandidateVotes}}}</td>
+                    <td>{{ElectionResult.candidateVotesPercentage}}</td>
+                    <td>{{ElectionResult.result}}</td>
+                    <td>
+                        <button (click)="ElectionresultDetails(ElectionResult.candidate.candidateId)" class="btn btn-info" >Details>></button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="start">
+<h2>User Details</h2>
+<hr>
+<div *ngIf = "user">
+    <div>
+        <label><b>FirstName: </b></label>{{user.firstName}}
+    </div>
+    <div>
+        <label><b>LastName: </b></label>{{user.lastName}}
+    </div>
+    <div>
+        <label><b>MobileNo: </b></label>{{user.contactno}}
+    </div>
+    <div>
+        <label><b>EmailId: </b></label>{{user.email}}
+    </div>
+</div>
+<br>
+<br>
+<button (click) = "goToUserList()" class="btn btn-primary">Go To User List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">

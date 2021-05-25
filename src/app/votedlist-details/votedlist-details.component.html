@@ -1,0 +1,79 @@
+<div class="start">
+<h2> Voted List Details</h2>
+<hr>
+<div *ngIf = "votedlist">
+    <div>
+        <label><b>ID :- </b></label>{{votedlist.id}}
+    </div>
+    <div>
+        <label><b>Date pollingDate Time :- </b></label>{{votedlist.pollingDateTime}}
+    </div>
+    <div>
+        <label><b>VoterId Card No. :- </b></label>{{votedlist.voter.voterIdCardNo}}
+    </div>
+    <div>
+        <label><b>Nominated CandidateId :- </b></label>{{votedlist.candidate.candidateId}}
+    </div>
+    <div>
+        <label><b>Nomination Form Number :- </b></label>{{votedlist.candidate.nominationFormNo}}
+    </div>
+    <div>
+        <label><b>Voter First Name :- </b></label>{{votedlist.voter.firstName}}
+    </div>
+    <div>
+        <label><b>Voter Last Name :- </b></label>{{votedlist.voter.lastName}}
+    </div>
+    <div>
+        <label><b>Voter Gender :- </b></label>{{votedlist.voter.gender}}
+    </div>
+    <div>
+        <label><b>Voter Reservation Category :- </b></label>{{votedlist.voter.reservationCategory}}
+    </div>
+    <div>
+        <label><b>Voter mobile number :-  </b></label>{{votedlist.voter.mobileno}}
+    </div>
+    <div>
+        <label><b>Voter emailId :-  </b></label>{{votedlist.voter.emailId}}
+    </div>
+    <div>
+        <label><b>Address :- </b></label>{{votedlist.voter.address1}}
+    </div>
+    <div>
+        <label><b>Mandal :-  </b></label>{{votedlist.voter.mandal}}
+    </div>
+    <div>
+        <label><b> District :- </b></label>{{votedlist.voter.district}}
+    </div>
+    <div>
+        <label><b>Pincode :- </b></label>{{votedlist.voter.address1}}
+    </div>
+    <div>
+        <label><b>casted vote :- </b></label>{{votedlist.voter.castedVote}}
+    </div>
+    <div>
+        <label><b>voter society ID :- </b></label>{{votedlist.society.societyId}}
+    </div>
+    <div>
+        <label><b>Voter societyName :- </b></label>{{votedlist.society.societyName}}
+    </div>
+    <div>
+        <label><b>Voter head of the society :- </b></label>{{votedlist.society.headOfSociety}}
+    </div>
+    <div>
+        <label><b>village :- </b></label>{{votedlist.society.village}}
+    </div>
+    <div>
+        <label><b>mandal :- </b></label>{{votedlist.society.mandal}}
+    </div>
+    <div>
+        <label><b>District :- </b></label>{{votedlist.society.district}}
+    </div>
+    <div>
+        <label><b>Pincode :- </b></label>{{votedlist.society.pincode}}
+    </div>
+</div>
+<br>
+<br>
+<button (click) = "goToVotedList()" class="btn btn-primary">Go To Voted List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">

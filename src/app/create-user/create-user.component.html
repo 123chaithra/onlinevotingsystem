@@ -1,0 +1,84 @@
+<div class="start">
+<!-- <img style="position: relative;left: 80px;top: 2px;" src = "../../assets/logo.png"> -->
+    <div [hidden]= "submitted">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+        <form #createUserForm="ngForm" novalidate>
+            <!-- <div class="form-group">
+                <label for="userId">User Id</label>
+                <input type="text" name="userId" class="form-control" 
+                        placeholder="Enter the UserId" required minlength="1" 
+                        #userId="ngModel"
+                        [(ngModel)]= "user.userId"
+                        [ngClass]= "{'is-invalid':userId?.errors && (userId?.touched || userId?.dirty),
+                                        'is-valid':firstName?.valid}">
+                <div class="invalid-feedback">
+                    <strong *ngIf= "userId?.errors?.required">UserId is required</strong>
+                    <strong *ngIf= "userId?.errors && (userId?.touched || userId?.dirty) ">UserId is not valid</strong>
+                </div>
+            </div> -->
+        <div class="form-group">
+            <label for="firstName">User First Name</label>
+            <input type="text" name="firstName" class="form-control" 
+                    placeholder="Enter the User First Name" required minlength="5" 
+                    #firstName="ngModel"
+                    [(ngModel)]= "user.firstName"
+                    [ngClass]= "{'is-invalid':firstName?.errors && (firstName?.touched || firstName?.dirty),
+                                    'is-valid':firstName?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf= "firstName?.errors?.required">First Name is required</strong>
+                <strong *ngIf= "firstName?.errors && (firstName?.touched || firstName?.dirty) ">First Name is not valid</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label freor="lastName">User Last Name</label>
+            <input type="text" name="lastName" class="form-control" 
+                  placeholder="Enter the User Last Name" 
+                  required [(ngModel)]= "user.lastName" #lastName="ngModel"
+                  [ngClass]= "{'is-invalid':lastName?.errors && (lastName?.touched ||lastName?.dirty),
+                  'is-valid':lastName?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "lastName?.errors?.required">lastName is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="contactno">User contactno</label>
+            <input type="text" name="contactno" class="form-control" 
+                  placeholder="Enter the User contactno"required minlength="10" maxlength ="10"
+                  [(ngModel)]= "user.contactno" #contactno="ngModel"
+                  [ngClass]= "{'is-invalid':contactno?.errors && (contactno?.touched || contactno?.dirty),
+                  'is-valid':contactno?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "contactno?.errors?.required">contactno is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="email">User email</label>
+            <input type="text" name="email" class="form-control" 
+                  placeholder="Enter the product email" required 
+                  [(ngModel)]= "user.email" #email="ngModel"
+                  [ngClass]= "{'is-invalid':email?.errors && (email?.touched || email?.dirty),
+                  'is-valid':email?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "email?.errors?.required">email is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="password">User password</label>
+            <input type="password" name="password" class="form-control" 
+                  placeholder="Enter the product password" required minlength="7"
+                  [(ngModel)]= "user.password" #password="ngModel"
+                  [ngClass]= "{'is-invalid':password?.errors && (password?.touched || password?.dirty),
+                  'is-valid':password?.valid}">
+                <div class="invalid-feedback">
+                    <strong *ngIf= "password?.errors?.required">password is required</strong>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add User</button>
+        <button type="submit" class="btn btn-default" (click)= "createUserForm.reset()">Reset</button>
+    </form>
+    </div>
+    <div [hidden]="submitted">
+    </div>
+</div>
+<img  src = "../../assets/userPage.jpg">
+

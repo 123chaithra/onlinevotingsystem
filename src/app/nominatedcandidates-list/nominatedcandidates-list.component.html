@@ -1,0 +1,66 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Candidates List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Candidate Id</th> 
+                    <th>Nomination Form No</th>
+                    <th>Voter Id</th>
+                    <th>Voter FirstName</th>
+                    <th>Voter LastName</th>
+                    <!-- <th>Gender</th>
+                    <th>Reservation Category</th> -->
+                    <!-- <th>Mobile no</th>
+                    <th>Email Id</th> -->
+                    <th>Address 1</th>
+                    <!-- <th>Address 2</th>
+                    <th>Mandal</th>
+                    <th>District</th>
+                    <th>Pincode</th> -->
+                    <th>Society Id</th>
+                    <th>Society Name</th>
+                    <th>Head Of Society</th>
+                    <th>Village</th>
+                    <th>Society Mandal</th>
+                    <th>Society District</th>
+                    <th>Society Pincode</th>
+                    <th>Actions</th> 
+                </tr>   
+            </thead>
+            <tbody>
+                <tr *ngFor = "let nominatedcandidate of nominatedcandidates">
+                    <td>{{nominatedcandidate.candidateId}}</td>
+                    <td>{{nominatedcandidate.nominationFormNo}}</td>
+                    <td>{{nominatedcandidate.society_Voter.id}}</td>
+                    <td>{{nominatedcandidate.society_Voter.voterIdCardNo}}</td>                    
+                    <td>{{nominatedcandidate.society_Voter.firstName}}</td>
+                    <td>{{nominatedcandidate.society_Voter.lastName}}</td>
+                    <!-- <td>{{nominatedcandidate.society_Voter.gender}}</td>
+                    <td>{{nominatedcandidate.society_Voter.reservationCategory}}</td> -->
+                    <!-- <td>{{nominatedcandidate.society_Voter.mobileno}}</td>
+                    <td>{{nominatedcandidate.society_Voter.emailId}}</td> -->
+                    <td>{{nominatedcandidate.society_Voter.address1}}</td>
+                    <!-- <td>{{nominatedcandidate.society_Voter.address2}}</td>
+                    <td>{{nominatedcandidate.society_Voter.mandal}}</td>
+                    <td>{{nominatedcandidate.society_Voter.district}}</td>
+                    <td>{{nominatedcandidate.society_Voter.pincode}}</td> -->
+                    <td>{{nominatedcandidate.society_Voter.society.societyId}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.societyName}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.headOfSociety}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.village}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.mandal}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.district}}</td>
+                    <td>{{nominatedcandidate.society_Voter.society.pincode}}</td>                           
+                    <td>
+                        <button (click)="nominatedcandidatesDetails(nominatedcandidate.candidateId)" class="btn btn-info" >Details>></button>
+                        <button (click)="removeNominatedCandidate(nominatedcandidate.candidateId)" class="btn btn-danger" style="margin-left:15px">Delete</button>
+                        <button (click)="updateNominatedcandidates(nominatedcandidate.candidateId)" class="btn btn-info" style="margin-left:15px">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

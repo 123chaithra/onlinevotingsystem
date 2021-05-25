@@ -1,0 +1,28 @@
+<div class="start">
+<h2>society Details</h2>
+<hr>
+<div *ngIf = "society">
+    <div>
+        <label><b>societyId: </b></label>{{society.societyId}}
+    </div>
+    <div>
+        <label><b>headOfSociety: </b></label>{{society.headOfSociety}}
+    </div>
+    <div>
+        <label><b>Village: </b></label>{{society.village}}
+    </div>
+    <div>
+        <label><b>Mandal: </b></label>{{society.mandal}}
+    </div>
+    <div>
+        <label><b>District: </b></label>{{society.district}}
+    </div>
+    <div>
+        <label><b>Pincode: </b></label>{{society.pincode}}
+    </div>
+</div>
+<br>
+<br>
+<button (click) = "goToSocietyList()"class="btn btn-primary">Go To society List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">

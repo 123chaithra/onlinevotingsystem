@@ -1,0 +1,191 @@
+<div class="start">
+<h3>Add Voter</h3>
+<div style="width:400px" [hidden]="submitted">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+    <form #createVoterForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="id">Voter Id</label>
+            <input type="text" name="id" class="form-control" placeholder="Enter the Voter Id" required
+                [(ngModel)]="voter.id" #id="ngModel" [ngClass]="{'is-invalid':id?.errors && (id?.touched ||id?.dirty),
+                      'is-valid':id?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="id?.errors?.required">id is required</strong>
+                <strong *ngIf="id?.errors && (id?.touched || id?.dirty) ">id is not valid</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="voterIdCardNo">Voter IdCard Number</label>
+            <input type="text" name="voterIdCardNo" class="form-control" placeholder="Enter the Voter id card no." required
+                minlength="5" #voterIdCardNo="ngModel" [(ngModel)]="voter.voterIdCardNo" [ngClass]="{'is-invalid':voterIdCardNo?.errors && (voterIdCardNo?.touched || voterIdCardNo?.dirty),
+                                    'is-valid':voterIdCardNo?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="voterIdCardNo?.errors?.required">Voter IdCard number is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">Voter First Name</label>
+            <input type="text" name="firstName" class="form-control" placeholder="Enter the Voter First Name" required
+                [(ngModel)]="voter.firstName" #firstName="ngModel" [ngClass]="{'is-invalid':firstName?.errors && (firstName?.touched ||firstName?.dirty),
+                  'is-valid':firstName?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="firstName?.errors?.required">firstName is required</strong>
+                <strong *ngIf="firstName?.errors && (firstName?.touched || firstName?.dirty) ">First Name is not
+                    valid</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Voter Last Name</label>
+            <input type="text" name="lastName" class="form-control" placeholder="Enter the Voter Last Name" required
+                [(ngModel)]="voter.lastName" #lastName="ngModel" [ngClass]="{'is-invalid':lastName?.errors && (lastName?.touched ||lastName?.dirty),
+                  'is-valid':lastName?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="lastName?.errors?.required">lastName is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Voter Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter the Password" required
+                [(ngModel)]="voter.password" #password="ngModel" [ngClass]="{'is-invalid':password?.errors && (password?.touched ||password?.dirty),
+                  'is-valid':password?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="password?.errors?.required">password is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gender">Voter Gender</label>
+            <input type="text" name="gender" class="form-control" placeholder="Enter the Gender" required
+                [(ngModel)]="voter.gender" #gender="ngModel" [ngClass]="{'is-invalid':gender?.errors && (gender?.touched ||gender?.dirty),
+                  'is-valid':gender?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="gender?.errors?.required">gender is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reservationCategory">reservation Category</label>
+            <input type="text" name="reservationCategory" class="form-control"
+                placeholder="Enter the reservationCategory"  required [(ngModel)]="voter.reservationCategory"
+                #reservationCategory="ngModel" [ngClass]="{'is-invalid':reservationCategory?.errors && (reservationCategory?.touched ||reservationCategory?.dirty),
+                  'is-valid':reservationCategory?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="reservationCategory?.errors?.required">reservationCategory is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mobileno">Voter Mobile no</label>
+            <input type="text" name="mobileno" class="form-control" placeholder="Enter the Mobile number" required minlength="10"
+                [(ngModel)]="voter.mobileno" #mobileno="ngModel" [ngClass]="{'is-invalid':mobileno?.errors && (mobileno?.touched ||mobileno?.dirty),
+                  'is-valid':mobileno?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="mobileno?.errors?.required">mobileno is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="emailId">Voter Email-Id</label>
+            <input type="text" name="emailId" class="form-control" placeholder="Enter the emailId" required
+                [(ngModel)]="voter.emailId" #emailId="ngModel" [ngClass]="{'is-invalid':emailId?.errors && (emailId?.touched ||emailId?.dirty),
+                  'is-valid':emailId?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="emailId?.errors?.required">emailId is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address1">Voter Address 1</label>
+            <input type="text" name="address1" class="form-control" placeholder="Enter the Address 1" required
+                [(ngModel)]="voter.address1" #address1="ngModel" [ngClass]="{'is-invalid':address1?.errors && (address1?.touched ||address1?.dirty),
+                  'is-valid':address1?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="address1?.errors?.required">address1 is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address2">Voter Address 2</label>
+            <input type="text" name="address2" class="form-control" placeholder="Enter the Address2" required
+                [(ngModel)]="voter.address2" #address2="ngModel" [ngClass]="{'is-invalid':address2?.errors && (address2?.touched ||address2?.dirty),
+                  'is-valid':address2?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="address2?.errors?.required">address2 is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mandal">Voter Mandal</label>
+            <input type="text" name="mandal" class="form-control" placeholder="Enter Mandal" required
+                [(ngModel)]="voter.mandal" #mandal="ngModel" [ngClass]="{'is-invalid':mandal?.errors && (mandal?.touched ||mandal?.dirty),
+                  'is-valid':mandal?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="mandal?.errors?.required">mandal is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="district">Voter District</label>
+            <input type="text" name="district" class="form-control" placeholder="Enter the district" required
+                [(ngModel)]="voter.district" #district="ngModel" [ngClass]="{'is-invalid':district?.errors && (district?.touched ||district?.dirty),
+                  'is-valid':district?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="district?.errors?.required">district is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pincode">Voter Pincode</label>
+            <input type="text" name="pincode" class="form-control" placeholder="Enter the Pincode" required
+                [(ngModel)]="voter.pincode" #pincode="ngModel" [ngClass]="{'is-invalid':pincode?.errors && (pincode?.touched ||pincode?.dirty),
+                  'is-valid':pincode?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf="pincode?.errors?.required">pincode is required</strong>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="societyId">Voter SocietyId</label>
+            
+            <select required type="text" class="form-control" name="societyId" #societyId="ngModel"
+                (change)="OnSelectSociety($event.target.value)" [(ngModel)]="voter.society.societyId">
+                <option *ngFor="let dl of societyIds" [value]="dl">
+                    {{dl}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="societyName">Voter Society</label>
+            <input type="text" name="societyName" class="form-control" placeholder="Enter Society Name" disabled
+                value="{{voter.society.societyName}}">
+        </div>
+        <div class="form-group">
+            <label for="headOfSociety"> HeadOfSociety</label>
+            <input type="text" name="headOfSociety" class="form-control" placeholder="Enter Head Of Society" disabled
+                value="{{voter.society.headOfSociety}}">
+        </div>
+        <div class="form-group">
+            <label for="village">Society village</label>
+            <input type="text" name="village" class="form-control" placeholder="Enter village" disabled
+                value="{{voter.society.village}}">
+        </div>
+        <div class="form-group">
+            <label for="mandal">Society mandal</label>
+            <input type="text" name="mandal" class="form-control" placeholder="Enter mandal" disabled
+                value="{{voter.society.mandal}}">
+        </div>
+        <div class="form-group">
+            <label for="district">Society District</label>
+            <input type="text" name="district" class="form-control" placeholder="Enter District" disabled
+                value="{{voter.society.district}}">
+        </div>
+        <div class="form-group">
+            <label for="pincode">Society Pincode</label>
+            <input type="text" name="pincode" class="form-control" placeholder="Enter the Pincode" disabled
+                value="{{voter.society.pincode}}">
+        </div>
+        <div class="form-group">
+
+            <label for="castedVote">Vote Casted</label><br>
+            <select name="castedVote" ng-model="voter.castedVote">
+                <option value="option-1">True</option>
+                <option value="option-2">False</option>
+            </select><br>
+        </div>
+        <button type="submit" class="btn btn-success" (click)="onSubmit()">Add Voter</button>
+        <button type="submit" class="btn btn-default" (click)="createVoterForm.reset()">Reset</button>
+    </form>
+</div>
+<div [hidden]="submitted">
+    <h4>Voter added successully</h4>
+</div>
+<img  src = "../../assets/userPage.jpg">

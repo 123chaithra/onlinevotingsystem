@@ -1,0 +1,74 @@
+<div class="start">
+<h2>nominatedcandidates-details</h2>
+<hr>
+    <div *ngIf = "nominatedcandidate">
+            <label><b>CandidateId : </b></label>{{nominatedcandidate.candidateId}}
+            <div>
+                <label><b>Nomination Form No : </b></label>{{nominatedcandidate.nominationFormNo}}
+            </div>
+            <div>
+                <label><b>Voter Id : </b></label>{{nominatedcandidate.society_Voter.id}}
+            </div>
+            <div>
+                <label><b>Voter Id Card no : </b></label>{{nominatedcandidate.society_Voter.voterIdCardNo}}
+            </div>
+            <div>
+                <lable><b>Voter FirstName : </b></lable>{{nominatedcandidate.society_Voter.firstName}}
+            </div>
+            <div>
+                <lable><b>Voter LastName : </b></lable>{{nominatedcandidate.society_Voter.lastName}}
+            </div>
+            <div>
+                <lable><b>Gender : </b></lable>{{nominatedcandidate.society_Voter.gender}}
+            </div>
+            <div>
+                <lable><b>Reservation Category : </b></lable>{{nominatedcandidate.society_Voter.reservationCategory}}
+            </div>
+            <div>
+                <lable><b>Mobile No : </b></lable>{{nominatedcandidate.society_Voter.mobileno}}
+            </div>
+            <div>
+                <lable><b>Email Id : </b></lable>{{nominatedcandidate.society_Voter.emailId}}
+            </div>
+            <div>
+                <lable><b>Address 1 : </b></lable>{{nominatedcandidate.society_Voter.address1}}
+            </div>
+            <div>
+                <lable><b>Address 2 :</b></lable>{{nominatedcandidate.society_Voter.address2}}
+            </div>
+            <div>
+                <lable><b>Mandal : </b></lable>{{nominatedcandidate.society_Voter.mandal}}
+            </div>
+            <div>
+                <lable><b>District : </b></lable>{{nominatedcandidate.society_Voter.district}}
+            </div>
+            <div>
+                <lable><b>Pincode : </b></lable>{{nominatedcandidate.society_Voter.pincode}}
+            </div>
+            <div>
+                <lable><b>Society id : </b></lable>{{nominatedcandidate.society_Voter.society.societyId}}
+            </div>
+            <div>
+                <lable><b>Society Name : </b></lable>{{nominatedcandidate.society_Voter.society.societyName}}
+            </div>
+            <div>
+                <lable><b>Head Of Society : </b></lable>{{nominatedcandidate.society_Voter.society.headOfSociety}}
+            </div>
+            <div>
+                <lable><b>Village : </b></lable>{{nominatedcandidate.society_Voter.society.village}}
+            </div>
+            <div>
+                <lable><b>Society Mandal : </b></lable>{{nominatedcandidate.society_Voter.society.mandal}}
+            </div>
+            <div>
+                <lable><b>Society District : </b></lable>{{nominatedcandidate.society_Voter.society.district}}
+            </div>
+            <div>
+                <lable><b>Society Pincode : </b></lable>{{nominatedcandidate.society_Voter.society.pincode}}
+            </div>
+    </div>
+    <br>
+    <br>
+    <button (click) = "goToNominatedCandidateList()" class="btn btn-primary">Go To NominatedCandidate List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">

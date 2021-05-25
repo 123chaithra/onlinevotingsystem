@@ -1,0 +1,58 @@
+<div class="start">
+<h2>ElectionResult Details</h2>
+<hr>
+<div *ngIf = "electionresult">
+    <div>
+        <label><b>PollingDate: </b></label>{{electionresult.pollingDate}}
+    </div>
+    <div>
+        <label><b>CandidateId: </b></label>{{electionresult.candidate.candidateId}}
+    </div>
+    <div>
+        <label><b>NominationFormNo: </b></label>{{electionresult.candidate.nominationFormNo}}
+    </div>
+    <div>
+        <label><b></b>Voter FirstName: </label>{{electionresult.candidate.society_Voter.firstName}}
+    </div>
+    <div>
+        <label><b>Voter LastName: </b></label>{{electionresult.candidate.society_Voter.lastName}}
+    </div>
+    <div>
+        <label><b>Voter ReservationCategory: </b></label>{{electionresult.candidate.society_Voter.reservationCategory}}
+    </div>
+    <div>
+        <label><b>Voter MobileNo: </b></label>{{electionresult.candidate.society_Voter.mobileno}}
+    </div>
+    <div>
+        <label><b>Voter Mandal: </b></label>{{electionresult.candidate.society_Voter.mandal}}
+    </div>
+    <div>
+        <label><b>Voter District: </b></label>{{electionresult.candidate.society_Voter.district}}
+    </div>
+    <div>
+        <label><b>Cooperative SocietyName: </b></label>{{electionresult.coop_SocietyName}}
+    </div>
+    <div>
+        <label><b>TotalSocietyVotes: </b></label>{{electionresult.totalSocietyVotes}}
+    </div>
+    <div>
+        <label><b>TotalPolledVotes: </b></label>{{electionresult.totalPolledVotes}}
+    </div>
+    <div>
+        <label><b>TotalPollingPercentage: </b></label>{{electionresult.totalPollingPercentage}}
+    </div>
+    <div>
+        <label><b>TotalCandidateVotes: </b></label>{{electionresult.totalCandidateVotes}}
+    </div>
+    <div>
+        <label><b>CandidatesVotingPercentage: </b></label>{{electionresult.candidateVotesPercentage}}
+    </div>
+    <div>
+        <label><b>Results: </b></label>{{electionresult.result}}
+    </div>
+</div>
+<br>
+<br>
+<button (click) = "goToElectionResultList()" class="btn btn-primary">Go To ElectionResults List</button><br>
+</div>
+<img  src = "../../assets/userPage.jpg">
